@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Shopping Cart Example</title>
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" th:href="@{cart/style.css}">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" th:href="@{cart/demo.css}">
+  
+  </head>
+  <body>  
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+	 <div th:each="i:${cartitem}">
+		<div class="productcont">
+			<div class="product">
+				<h3 class="productname" th:text="${i.getName}">Product 1</h3>
+				<p class="price" th:text="${i.getPrice}">$5.05</p>
+				</div>   
+		</div>
+	 </div>
+	<div class="cart-container">
+			</thead>
+			<tbody id="carttable">
+			</tbody>
+		</table>
+		<hr>
+		<table id="carttotals" >
+			<tr>
+			<td><strong>Items</strong></td>
+			<td><strong>Total</strong></td>
+			</tr>
+			<tr>
+			<td>x <span id="itemsquantity" th:text="${cartService.size}" >0</span></td>
+			
+			<td>$<span id="total"th:text="${cartService.getAmount}" >0</span></td>
+			</tr>
+		</table>
+			<div class="cart-buttons">
+			<form method="post">
+			<button id="checkout">Checkout</button>
+			</form>  
+			</div>
+	</div>
+			<!-- partial -->
+
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+  </body>
+</html>
