@@ -1,8 +1,0 @@
-trdung\controllers\testController.class
-trdung\service\productService.class
-trdung\model\Product.class
-trdung\repository\productServiceImpl.class
-trdung\Ver6Application.class
-trdung\repository\productRepo.class
-trdung\model\account.class
-trdung\repository\accountRepo.class
