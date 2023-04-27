@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" title="Coding design">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive HTML Table With Pure CSS - Web Design/UI Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="table">
+        <section class="table__header">
+            <h1>List User</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="images/search.png" alt="">
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+               <thead>
+                    <tr>
+                        <th> Id</th>
+                        <th> Tên đăng nhập</th>
+                        <th> Password</th>
+
+                    </tr>
+                </thead>
+                <tbody th:each="i:${listUser}">
+                    <tr>
+                        <td th:text="${i.id}"> id </td>
+                        <td th:text="${i.name}"> username </td>
+                        <td th:text="${i.password}"> pass </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

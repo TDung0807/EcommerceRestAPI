@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quản lý phim - Xem Phim Online</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/filmManagement.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Xem Phim Online</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Người dùng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Quản lý phim</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Mô tả</th>
+                <th>Thời lượng</th>
+            </tr>
+            </thead>
+            <tbody>
+<!--            <tr th:each="movie : ${movies}">-->
+<!--                <td th:text="${movie.id}"></td>-->
+<!--                <td th:text="${movie.name}"></td>-->
+<!--                <td th:text="${movie.description}"></td>-->
+<!--                <td th:text="${movie.time}"></td>-->
+<!--            </tr>-->
+            </tbody>
+        </table>
+
+        <a href="add" class="btn btn-primary">Thêm phim mới</a>
+    </main>
+    <!--Bootstrap 5 JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"
+        integrity="sha512-+h3qJr7rX6NnY6jN83Nw1eWUbJ8s+Q2s7jK6vZcWJ9X/A0Qezz7L1+KcBzNJ8PcZn0zZKaJvZd1j0eqXO32a1g=="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

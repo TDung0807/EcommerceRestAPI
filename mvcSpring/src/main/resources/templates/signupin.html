@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="SignInSignUp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../resources/images/favicon.jpg">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="Section_top">
+        <div class="content">
+            <div class="signin-signup">
+                <form action="" class="sign-in-form" method="post">
+                    <header>Login</header>
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type=" text" name="username" id="usernameLogin" required
+                            placeholder="Email or Phone number" onInput="checkLogin()">
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" name="password" id="passwordLogin" required placeholder="Password"
+                            onInput="checkLogin()">
+                        <span class="show0">SHOW</span>
+                    </div>
+                    <div class="pass">
+                        <!-- <a href="#">Forgot password</a> -->
+                    </div>
+                    <div class="field">
+                        <button type="submit" name="btnSignin" id="signinButton" value="true"> SIGN IN </button>
+                    </div>
+                    <div class="signup" id="sign-up-btn">
+                        Don't have an account? <a href="#">CREATE ACCOUNT</a>
+                    </div>
+                </form>
+
+                <form action="" class="sign-up-form" method="post">
+                    <header>Sign Up</header>
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type=" text" name="nameSignup" id="username" required placeholder="Email or Phone number"
+                            onInput="checkConfirm()">
+
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" id="password" name="passSignup" required placeholder="Password"
+                            onInput="check(); checkConfirm()">
+                        <span class="show">SHOW</span>
+                    </div>
+                    <div class="warning">
+                        <div id="check1">
+                            <i class="fa fa-check-circle"></i>
+                            Password is at least 6 characters long.
+                        </div>
+                        <div id="check2">
+                            <i class="fa fa-check-circle"></i>
+                            Password contains at least one letter or number
+                        </div>
+
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" id="confirm" required placeholder="Confirm Password"
+                            onInput="checkConfirm()">
+                        <span class="show1">SHOW</span>
+                    </div>
+
+                    <div class="field signup">
+                        <button type="submit" name="btnSignup" id="createButton" value="true">CREATE ACCOUNT</button>
+                    </div>
+
+                    <div class="already-have-account" id="sign-in-btn">
+                        <a href="#">Already have an account?</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- Modal Sign Up succeeded  -->
+
+
+    </div>
+    <script src="SignInSignUp.js"></script>
+
+
+</body>
+
+</html>

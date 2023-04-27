@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Film</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/addfilm.css">
+</head>
+<body>
+<form action="add" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label for="description">Description:</label>
+    <textarea name="description" required></textarea><br><br>
+
+    <label for="poster">Poster:</label>
+    <input type="text" name="poster" required><br><br>
+
+    <label for="status">Status:</label>
+    <select name="status" required>
+        <option value="1">In progress</option>
+        <option value="2">Completed</option>
+    </select><br><br>
+
+    <label for="time">Time:</label>
+    <input type="number" name="time" required><br><br>
+
+    <label for="total_episode">Total Episodes:</label>
+    <input type="number" name="total_episode" required><br><br>
+
+    <label for="url_image">Image URL:</label>
+    <input type="text" name="url_image" required><br><br>
+
+    <label for="url_trailer">Trailer URL:</label>
+    <input type="text" name="url_trailer" required><br><br>
+
+    <label for="year">Year:</label>
+    <input type="number" name="year" required><br><br>
+
+    <label for="country_id">Country:</label>
+    <select name="country_id" required>
+        <option value="">Select a country</option>
+        <option value="1">Vietnam</option>
+        <option value="2">Canada</option>
+        <option value="3">UK</option>
+        <option value="4">Australia</option>
+        <!-- add more countries as needed -->
+    </select><br><br>
+
+    <label for="language_id">Language:</label>
+    <select name="language_id" required>
+        <option value="">Select a language</option>
+        <option value="1">Vietnamese</option>
+        <option value="2">Spanish</option>
+        <option value="3">French</option>
+        <option value="4">German</option>
+        <!-- add more languages as needed -->
+    </select><br><br>
+
+    <label for="studio_id">Studio:</label>
+    <select name="studio_id" required>
+        <option value="">Select a studio</option>
+        <option value="1">stu1</option>
+        <option value="2">Disney</option>
+        <option value="3">Universal Studios</option>
+        <option value="4">Paramount Pictures</option>
+        <!-- add more studios as needed -->
+    </select><br><br>
+
+    <button type = "submit">Thêm phim</button>
+</form>
+</body>
+</html>

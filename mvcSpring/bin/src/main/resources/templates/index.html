@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--     Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css%22%3E"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <!-- Font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,800;0,900;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href = "css/style.css" >
+    <!-- Boxicon  -->
+
+
+    <!------------ shortIcon  -------->
+    <link rel="shortcut icon" href="images/favicon.jpg">
+
+    <!-- Title  -->
+    <title>Filmo</title>
+</head>
+
+<body>
+
+    <!--------------- Navigation bar  ------------->
+    <nav>
+        <nav class="navbar">
+            <nav class="navbar_container">
+                <a href="#" class="logo_container">Filmo</a>
+                <nav class="menu_container">
+                    <!-- search -->
+                    <form method="post">
+	                    <div class="search-bar">
+	                        <input type="text" name="idSearch" placeholder="Search...">
+	                        <p>┊&nbsp;&nbsp;</p>
+	                        <button type="submit" class="sidebar_items fa-solid fa-magnifying-glass"></button>
+	                    </div>
+                    </form>
+                    <!-- menu -->
+                    <div class="menu_item">
+                        <ul class="menu_list" id="menu_list">
+                            <div class="dropdown" onmouseenter="Dropdown()" onmouseleave="closeDropdown()">
+                                <button class="dropbtn">GENRE</button>
+<!--                                <div class="dropdown-content" id="myDropdown">-->
+<!--                                    <a th:href="@{index/action}">Action</a>-->
+<!--                                    <a th:href="@{index/horror}">Horror</a>-->
+<!--                                    <a th:href="@{index/romantic}">Romantic</a>-->
+<!--                                </div>-->
+                            </div>
+
+                            <li>
+                                <a href="#" class="btn btn-hover">
+                                    <span>Sign in</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- account -->
+
+                    <div class="avatar-container">
+                        <img src="images/profile_picture.jpg" alt="" class="avatar"   title="">
+                        <div class="dropdown-menu">
+                            <a href="#">Saved</a>
+                            <a href="#">History</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+
+            </nav>
+        </nav>
+
+    </nav>
+
+
+    <div class="home-container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source th:src="@{videos/background.mp4}" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>FILMO</h1>
+            <a href="#">Start Watching</a>
+        </div>
+    </div>
+
+
+
+
+    <!------------ Movie's Cards ------------>
+    <section class="movies" id="movies">
+        <h2 class="heading">Trending</h2>
+        <div class="movies-container">
+            <div class="box" th:each="i:${listMovie}">
+                <div class="box-img">
+                    <img src="${i.urlImage}" alt="">
+                    <div class="box-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <a href="" th:text="${i.getName}">Joker</a>
+                <span th:text="${i.duration}">120 min | Action</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Upcoming movies -->
+
+
+
+
+    <!-- footer -->
+
+    <div class="footer_box">
+        <div class="infor_container">
+            <div class="above_detail">
+                <div class="text_intro">FILMO</div>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+
+                </div>
+                <hr width="100%" color="#acabab" />
+                <div class="link_items">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td><a href="">Chính sách bảo mật</a></td>
+                                <td><a href="">Bảo vệ quyền riêng tư</a></td>
+                                <td><a href="">Điều khoản sử dụng</a></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Hợp tác quảng cáo</a></td>
+                                <td><a href="">Liên hệ với nhà phát triển</a></td>
+                                <td><a href="">Phản ánh ý kiến</a></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">Chính sách khuyến mãi</a></td>
+                                <td><a href="">Trung tâm hỗ trợ</a></td>
+                                <td><a href="">Thông tin công ty</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------------ JavaScript  ----------->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script th:src="@{/js/app.js}"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản lý tập phim - Xem Phim Online</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #343a40;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        .navbar {
+            border-radius: 0;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: #ced4da;
+        }
+    </style>
+</head>
+<body>
+<header class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Xem Phim Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Phim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Người dùng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tập phim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="container my-5">
+    <h1 class="text-center mb-5">Quản lý tập phim</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên tập phim</th>
+            <th>Phim</th>
+            <th>Số tập</th>
+        </tr>
+        </thead>
+        <tbody>
+<!--        <tr th:each="episode : ${episodes}">-->
+<!--            <td th:text="${episode.id}"></td>-->
+<!--            <td th:text="${episode.name}"></td>-->
+<!--            <td th:text="${episode.movie.name}"></td>-->
+<!--            <td th:text="${episode.number}"></td>-->
+<!--        </tr>-->
+        </tbody>
+    </table>
+    <a href="addEpisode" class="btn btn-primary">Thêm tập phim mới</a>
+</main>
+<!--Bootstrap 5 JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"
+        integrity="sha512-+h3qJr7rX6NnY6jN83Nw1eWUbJ8s+Q2s7jK6vZcWJ9X/A0Qezz7L1+KcBzNJ8PcZn0zZKaJvZd1j0eqXO32a1g=="
+        crossorigin="anonymous"></script>
+</body>
+</html>
